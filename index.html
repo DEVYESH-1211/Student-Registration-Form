@@ -1,91 +1,141 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Student Registration Form</title>
-        <link rel = "stylesheet" href = "style.css">
-    </head>
-    <body>
-        <div class = "container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="submitted.html">
+
             <h1>Student Registration Form</h1>
-            <br>
-            <div class = "date">
-                <label for = "date"><b>Date:</b></label>
-                <input type = "date" class = "date" placeholder="Enter Date">
+
+            <div class="form-group">
+                <label for="date"><b>Date:</b></label>
+                <input type="date" id="date" required>
             </div>
+
             <hr>
-            <div class = "basic_info">
+
+            <section class="basic_info">
                 <h2>Basic Information</h2>
-                <label for = "name"><b>Name:</b></label>
-                <input type = "text" class = "name" placeholder="Enter Your Name">
-                <label for = "dob"><b>DOB:</b></label>
-                <input type = "date" class = "dob" placeholder="Enter Your DOB">
-                <br><br>
-                <label for = "fname"><b>Father Name:</b></label>
-                <input type = "text" class = "fname" placeholder="Enter Your Father Name">
-                <label for = "mname"><b>Mother Name:</b></label>
-                <input type = "text" class = "mname" placeholder="Enter Your Mother Name">
-                <br><br>
-                <label><b>Address:</b></label>
-                <textarea rows="3" placeholder="Enter Your Address"></textarea>
-                <br><br>
-                <label for = "phno"><b>Phone Number:</b></label>
-                <input type = "text" class = "phno" placeholder="Enter Your Phone Number">
-                <label for = "email"><b>e-mail:</b></label>
-                <input type = "text" class = "email" placeholder="Enter Your Email-id">
-                <br><br>
-            </div>
+
+                <div class="form-group">
+                    <label for="name"><b>Name:</b></label>
+                    <input type="text" id="name" placeholder="Enter Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob"><b>DOB:</b></label>
+                    <input type="date" id="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fname"><b>Father Name:</b></label>
+                    <input type="text" id="fname" placeholder="Enter Father Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mname"><b>Mother Name:</b></label>
+                    <input type="text" id="mname" placeholder="Enter Mother Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address"><b>Address:</b></label>
+                    <textarea id="address" rows="3" placeholder="Enter Your Address" required style = "border: 1px solid #ccc; border-radius: 6px;" cols = "35"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="phno"><b>Phone Number:</b></label>
+                    <input type="tel" id="phno" placeholder="Enter Phone Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><b>Email:</b></label>
+                    <input type="email" id="email" placeholder="Enter Email" required>
+                </div>
+            </section>
+
             <hr>
-            <div class = "academic_info">
-                <h2>Accademic Information</h2>
-                <table Border = "1">
-                    <tr>
-                        <th>Grade</th>
-                        <th>Mark</th>
-                        <th>Percentage</th>
-                    </tr>
-                    <tr>
-                        <th>10<sup>th</sup></th>
-                        <th><input type = "text" placeholder="Enter Mark"></th>
-                        <th><input type = "text" placeholder="Enter Percentage"></th>
-                    </tr>
-                    <tr>
-                        <th>11<sup>th</sup></th>
-                        <th><input type = "text" placeholder="Enter Mark"></th>
-                        <th><input type = "text" placeholder="Enter Percentage"></th>
-                    </tr>
-                    <tr>
-                        <th>12<sup>th</sup></th>
-                        <th><input type = "text" placeholder="Enter Mark"></th>
-                        <th><input type = "text" placeholder="Enter Percentage"></th>
-                    </tr>
+
+            <section class="academic_info">
+                <h2>Academic Information</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Mark</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10<sup>th</sup></td>
+                            <td><input type="number" placeholder="Enter Mark" required></td>
+                            <td><input type="number" placeholder="Enter Percentage" required></td>
+                        </tr>
+                        <tr>
+                            <td>11<sup>th</sup></td>
+                            <td><input type="number" placeholder="Enter Mark" required></td>
+                            <td><input type="number" placeholder="Enter Percentage" required></td>
+                        </tr>
+                        <tr>
+                            <td>12<sup>th</sup></td>
+                            <td><input type="number" placeholder="Enter Mark" required></td>
+                            <td><input type="number" placeholder="Enter Percentage" required></td>
+                        </tr>
+                    </tbody>
                 </table>
-            </div>
+            </section>
+
             <hr>
-            <div class = "docs">
+
+            <section class="docs">
                 <h2>Documents</h2>
-                <label for = "photo"><b>Passport Size Photo:</b></label>
-                <input type = "file" id = "photo">
-                <label for = "aadhaar"><b>Aadhaar:</b></label>
-                <input type = "file" id = "aadhaar">
-                <br><br>
-                <label for = "sign"><b>Signature:</b></label>
-                <input type = "file" id = "sign">
-                <br><br>
-                <label for = "tmark"><b>10<sub>th</sub> Mark Sheet:</b></label>
-                <input type = "file" id = "tmark">
-                <br><br>
-                <label for = "emark"><b>11<sub>th</sub> Mark Sheet:</b></label>
-                <input type = "file" id = "emark">
-                <br><br>
-                <label for = "twmark"><b>12<sub>th</sub> Mark Sheet:</b></label>
-                <input type = "file" id = "twmark">
-            </div>
+
+                <div class="form-group">
+                    <label for="photo"><b>Passport Size Photo:</b></label>
+                    <input type="file" id="photo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="aadhaar"><b>Aadhaar:</b></label>
+                    <input type="file" id="aadhaar" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sign"><b>Signature:</b></label>
+                    <input type="file" id="sign" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tmark"><b>10th Mark Sheet:</b></label>
+                    <input type="file" id="tmark" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emark"><b>11th Mark Sheet:</b></label>
+                    <input type="file" id="emark" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="twmark"><b>12th Mark Sheet:</b></label>
+                    <input type="file" id="twmark" required>
+                </div>
+            </section>
+
             <hr>
-            <div class = "button">
-                <a href = "submitted.html">
-            <button type = "submit" value = "submit">Confirm</button>
-            </a>
+
+            <div class="button">
+                <button type = "reset">Reset</button>
+                <button type="submit">Confirm Registration</button>
             </div>
-        </div>
-    </body>
+
+        </form>
+    </div>
+
+</body>
 </html>
